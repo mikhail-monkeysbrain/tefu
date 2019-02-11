@@ -1,8 +1,21 @@
 block header
   header.header
-    h2 header
-    .header-container
-      nav.header-nav
-        each item in menu
-          a(href= item.link, class= item.class)
-            = item.name
+    .header--container.container
+      .header--social
+        a(href="javascript:void(0)").sprite.header--social__facebook
+        a(href="javascript:void(0)").sprite.header--social__vk
+        a(href="javascript:void(0)").sprite.header--social__instagram
+      .header--contacts
+        a.header--contacts__phone(href="tel:+ 7 (966) 016 05 69") + 7 (966) 016 05 69
+        a.header--contacts__mail(href="mailto:tka@tefu-co.com") tka@tefu-co.com
+      a(href="#top").sprite.header--logo
+      .header--nav Guide
+        .header--nav__dropdown
+          .header--nav__dropdown--heading
+            | Guide
+          a(href="#amenities").jsAncor Наши услуги
+          a(href="#work").jsAncor Как мы работаем
+          a(href="#sheme").jsAncor Схема
+          a(href="#team").jsAncor Команда
+          a(href="#partners").jsAncor Партнеры
+      a(href="#form").btn.jsAncor Написать нам

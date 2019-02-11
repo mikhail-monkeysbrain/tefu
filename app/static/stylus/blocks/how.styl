@@ -1,0 +1,74 @@
+.how
+  background $lightgray
+  padding-top 4.5rem
+
+  &--heading
+    padding-bottom 4rem
+
+  &--list
+    display flex
+    justify-content space-around
+    align-items flex-start
+    padding-bottom 5rem
+
+    &--item
+      display flex
+      flex-direction: column
+      justify-content center
+      align-items center
+      width 19rem
+      p
+        color $lightblue
+        font-family $mainFont
+        font-size 2.2rem
+        font-weight 700
+        text-align center
+        line-height 1.1
+        padding-top 1em
+      &__h-1
+        sprite($s_h_1)
+      &__h-2
+        sprite($s_h_2)
+      &__h-3
+        sprite($s_h_3)
+      &__h-4
+        sprite($s_h_4)
+      &__h-5
+        sprite($s_h_5)
+
+    &--arrow
+      sprite($s_h_array)
+      position relative
+      top 7rem
+
+  &--semi
+    width 48%
+    padding-bottom 5rem
+    position relative
+    margin-top: 2rem
+    padding-top: 3rem
+
+    &::before
+      content: ''
+      display block
+      width 56rem
+      height 1px
+      left 0
+      top 0
+      position absolute
+      background $black
+
+    &:nth-child(2)
+      &::before
+        left -.5rem
+
+    &--heading
+      color $black
+      font-family $lightFont
+      font-size 3rem
+      font-weight 300
+      padding-bottom 2.5rem
+    
+    p
+      font-size: 1.8rem
+      line-height 1.2

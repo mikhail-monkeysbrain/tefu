@@ -1,5 +1,142 @@
 @import '../core/variables.styl';
 
 .header
-  width 100%
-  height $heightHeader
+  width 192rem
+  height 10.2rem
+  position fixed
+  left 0
+  top 0
+  background-color $black
+  border-bottom: 0.6rem solid $lightblue
+  z-index 11
+
+  .btn
+    &:hover
+      box-shadow: .5rem .5rem .2rem 0rem $lightblueSemi
+    &:active
+      box-shadow: 1rem 1rem .5rem 0rem $lightblueSemi
+
+  &--container
+    height 100%
+    display flex
+    align-items center
+    justify-content space-between
+
+  &--social
+    width 14.5rem
+    display flex
+    justify-content space-between
+    align-items center
+    flex-shrink: 0
+
+    &__facebook
+      transition: $fast
+      backface-visibility: hidden
+      &:hover
+        transform:matrix(1.1,-0.54,0.54,1.1,0,0);
+      sprite($s_facebook)
+    &__vk
+      transition: $fast
+      backface-visibility: hidden
+      &:hover
+        transform:matrix(1.1,-0.54,0.54,1.1,0,0);
+      sprite($s_vk)
+    &__instagram
+      transition: $fast
+      backface-visibility: hidden
+      &:hover
+        transform:matrix(1.1,-0.54,0.54,1.1,0,0);
+      sprite($s_intagram)
+
+  &--contacts
+    display block
+    width 15rem
+    position relative
+    left -6rem
+
+    a
+      color $white
+      font-family: $lightFont
+      font-size 1.6rem
+      font-weight 300
+      display block
+      transition: $fast
+      &:hover
+        color $lightblue
+
+  &--logo
+    sprite($s_logo_header)
+    position relative
+    left -1.5rem
+    transition: $fast
+    &:hover
+      filter: blur(.3rem)
+
+  &--nav
+    color $white
+    font-family $mainFont
+    font-size 1.8rem
+    font-weight 400
+    cursor pointer
+    position relative
+    &::before
+      content: ''
+      sprite($s_drop)
+      display block
+      position absolute
+      left -2rem
+      top 1rem
+      transition $fast
+    &:hover
+      &::before
+        top 2rem
+    &.header--nav__opened
+      &::before
+        transform: scaleY(-1)
+      &:hover
+        &::before
+          top 1rem
+      .header--nav__dropdown
+        opacity 1
+        display flex
+
+    .header--nav__dropdown
+      position absolute
+      left -9.2rem
+      bottom -32.5rem
+      display none
+      opacity 0
+      flex-direction column
+      width 22.9rem
+      box-shadow 0.1rem 0.2rem 2.9rem rgba(42, 42, 42, 0.34)
+      background-color $lightblue
+      padding 2rem 3rem
+      transition: $fast
+      &::before
+        content: ''
+        position absolute
+        top -2rem
+        left calc(50% - 2rem) 
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 0 2rem 2rem 2rem
+        border-color: transparent transparent $lightblue transparent
+
+      &--heading
+        color $white
+        font-family $boldFont
+        font-size 2.2rem
+        font-weight 700
+        padding-bottom 1.6rem
+        border-bottom: 1px solid $blue
+
+      a
+        color $white
+        font-family $lightFont
+        font-size 1.7rem
+        padding 0.8rem 0
+        transition: $fast
+        border-bottom: 1px solid transparent
+        &:hover
+          text-shadow: 1px 1px 2px $black

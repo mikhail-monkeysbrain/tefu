@@ -4,9 +4,22 @@
   box-sizing border-box
   -webkit-tap-highlight-color transparent
 
+html
+  font-size: 10px
+
 body
   font 16px/1.5 $mainFont
   overflow-x: hidden
+  padding-top 10.2rem
+
+p
+  font-size 1.6rem
+
+h1,
+h2,
+h3,
+p
+  margin 0
 
 a,
 button,
@@ -34,3 +47,93 @@ figure
 
 .grid
   min-height: $gridHeight
+
+.sprite
+  display block
+
+.btn
+  width 22.2rem
+  height 4.5rem
+  background-color $lightblue
+  color $white
+  font-family $mainFont
+  font-size 2rem
+  font-weight 400
+  text-align center
+  cursor pointer
+  bottom 0
+  outline: none
+  display flex
+  justify-content center
+  align-items center
+  transition: $fast
+  &:hover
+    box-shadow: .5rem .5rem .2rem 0rem rgba(0,0,0, .5)
+  &:active
+    box-shadow: 1rem 1rem .5rem 0rem rgba(0,0,0, .5)
+
+.h1
+  color $white
+  font-family $intro
+  font-size 8.1rem
+  font-weight 400
+  text-transform uppercase
+  text-align center
+  line-height 1.2
+
+.h2
+  color $black
+  font-family $intro
+  font-size 3.4rem
+  font-weight 400
+  text-transform uppercase
+  text-align center
+  padding-bottom 2.5rem
+
+.h3
+  color $lightblue
+  font-family $mainFont
+  font-size 2.2rem
+  font-weight 700
+
+.semi
+  display flex
+  justify-content space-between
+  width 100%
+
+ul
+  list-style: none
+  padding-left 0
+
+li
+  color $black
+  font-family $lightFont
+  font-size 1.8rem
+  font-weight 300
+  position relative
+  padding 1rem
+  padding-left 3.3rem
+  &::before
+    content: ''
+    position absolute
+    display block
+    left 0
+    top 1.7rem
+    width 1.1rem
+    height 1.1rem
+    border-radius: 50%
+    background: $lightblue
+
+.row
+  width 100%
+  display flex
+  justify-content space-between
+  align-items center
+  margin-bottom 3rem
+  position relative
+
+.__white
+  color $white
+
+.__blue
+  color $lightblue

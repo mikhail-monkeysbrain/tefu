@@ -1,0 +1,15 @@
+form(action="")#form.form
+  h2.h2.form--heading.__blue(data-aos="zoom-in" data-aos-delay="50" data-aos-duration="500") Quick Contact
+  p.form--description(data-aos="zoom-out" data-aos-delay="550" data-aos-duration="500") To get your project underway, simply contact us and an expert will get in touch with you as soon as possible.
+  .form--container.container(data-aos="zoom-in" data-aos-delay="1050" data-aos-duration="500")
+    .row
+      input(type="text" placeholder="Имя" required).input.input__name
+      input(type="text" placeholder="Телефон" required).input.input__phone
+      input(type="text" placeholder="Мейл" required).input.input__mail
+    .row
+      textarea.input.input__text(placeholder="Оставить сообщение" required)
+    .row
+      input(type="checkbox" name="checkbox" required).input.input__checkbox#checkbox
+      label(for="checkbox").check.__white
+        | To get your project underway
+      button.btn.input__btn(type="submit" data-aos="flip-up" data-aos-delay="1550" data-aos-duration="500") ОТПРАВИТЬ

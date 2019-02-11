@@ -1,0 +1,33 @@
+.tech
+  position relative
+  width 100%
+  height 48.8rem
+  background url(../img/banner-2.jpg) center no-repeat
+  background-size cover
+
+  &--heading
+    padding-top 5.5rem  
+    padding-bottom 4rem
+
+  &--semi
+    width 48%
+    h3
+      padding-bottom 4rem
+      line-height 1.3
+
+  &--system
+    display flex
+    &__transistor
+      sprite($s_section_1)
+    &__atom
+      sprite($s_section_2)
+    ul
+      margin-top .7rem
+    li
+      line-height 1.3
+      padding 0
+      padding-left 2.5rem
+      margin-left 2rem
+      color $white
+      &::before
+        top 0.5rem

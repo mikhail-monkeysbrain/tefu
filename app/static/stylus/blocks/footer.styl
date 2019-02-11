@@ -3,3 +3,50 @@
 .footer
   width 100%
   height: $heightFooter
+  height 10.2rem
+  background-color $black
+  border-bottom: 0.6rem solid $lightblue
+
+  &--container
+    display flex
+    justify-content space-between
+    padding-top 2.5rem
+
+  &--logo
+    sprite($s_logo_header)
+    position absolute
+    left 0
+    right 0
+    margin 0 auto
+    transition: $fast
+    &:hover
+      filter: blur(.3rem)
+
+  &--social
+    width 14.5rem
+    display flex
+    justify-content space-between
+    align-items center
+    flex-shrink: 0
+
+    &__facebook
+      sprite($s_facebook)
+    &__vk
+      sprite($s_vk)
+    &__instagram
+      sprite($s_intagram)
+
+  &--contacts
+    display block
+    width 15rem
+    position relative
+
+    a
+      color $white
+      font-family: $lightFont
+      font-size 1.6rem
+      font-weight 300
+      display block
+      transition: $fast
+      &:hover
+        color $lightblue

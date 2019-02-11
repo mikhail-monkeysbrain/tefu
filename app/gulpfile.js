@@ -74,6 +74,16 @@ gulp.task('sprite', function() {
   spriteData.css.pipe(gulp.dest('static/stylus/sprite'));
 });
 
+
+gulp.task('rem', function(){
+  gulp.src('static/stylus/sprite/sprite.styl')
+      .pipe(gp.px2rem({
+        accuracy:2,
+        rootPX: 10
+      }))
+      .pipe(gulp.dest('static/stylus/sprite/sprite.styl'));
+});
+
 gulp.task('img:dev', () =>
     gulp.src('static/img/**/*.*')
         .pipe(gulp.dest('../dist/img/'))
@@ -113,6 +123,5 @@ gulp.task('build', gulp.series(
     'stylus',
     'scripts',
     'fonts',
-    'img:build',
-    'sprite'
+    'img:build'
 ));
